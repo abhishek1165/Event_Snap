@@ -12,9 +12,12 @@ const EventDetails = () => {
   const navigate = useNavigate();
   const [event, setEvent] = useState(null);
   const [status, setStatus] = useState(null);
+  const [photos, setPhotos] = useState([]);
   const [uploading, setUploading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     loadEventDetails();
