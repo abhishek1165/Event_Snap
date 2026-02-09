@@ -231,6 +231,42 @@ const EventDetails = () => {
             </label>
           </div>
         </motion.div>
+
+        {/* Photos Grid */}
+        {photos.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8"
+          >
+            <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              Uploaded Photos ({photos.length})
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {photos.map((photo, index) => (
+                <motion.div
+                  key={photo.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="relative aspect-square rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 group hover:border-indigo-500 transition-colors"
+                >
+                  <img
+                    src={`${BACKEND_URL}/api/photos/${photo.id}/thumbnail`}
+                    alt={`Photo ${index + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="text-white text-xs font-medium">
+                      {photo.faces_detected} face{photo.faces_detected !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </main>
     </div>
   );
