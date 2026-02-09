@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-02-09T06:13:19.596044",
+  "total_tests": 10,
+  "passed_tests": 10,
+  "success_rate": 100.0,
+  "test_details": [
+    {
+      "test": "Root API",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Register Organizer",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Current User",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create Event",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Events",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Event Details",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Upload Photos",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Processing Status",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Event by Code",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Register Attendee",
+      "success": true,
+      "details": "Status: 200"
+    }
+  ]
+}
