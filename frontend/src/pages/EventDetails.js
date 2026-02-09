@@ -76,6 +76,7 @@ const EventDetails = () => {
       });
 
       toast.success(`${files.length} photos uploaded successfully!`);
+      await loadPhotos();
       setTimeout(loadEventDetails, 1000);
     } catch (error) {
       console.error('Upload error:', error);
