@@ -1,0 +1,165 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Creative Designer",
+    "mission": "Create a face-recognition photo platform that feels magical, not dystopian. Blend high-end photography aesthetics with SaaS precision.",
+    "principles": [
+      "Fusion over Imitation: Mix 'Art Gallery' elegance with 'Fintech' precision.",
+      "Emotion First: The UI recedes; the photos are the heroes.",
+      "Content is King: Every screen is a frame for the user's memories.",
+      "Zoom In: Use bold focus on faces and details.",
+      "Negative Space: Luxurious padding to let photos breathe."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Outfit, sans-serif",
+        "weights": ["500", "700"],
+        "usage": "Landing page headlines, feature titles, modal headers. DO NOT use for dense data.",
+        "letterSpacing": "tracking-tight"
+      },
+      "body": {
+        "family": "Manrope, sans-serif",
+        "weights": ["400", "500", "600"],
+        "usage": "Dashboard tables, form inputs, body text, metadata.",
+        "features": "Excellent digit legibility for dates and stats."
+      },
+      "accent": {
+        "family": "Playfair Display, serif",
+        "weights": ["400", "600"],
+        "usage": "Testimonials, 'Magical' moments (e.g., '3 photos found!'), empty states."
+      }
+    },
+    "installation": "Import via Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Outfit:wght@500;700&family=Playfair+Display:wght@400;600&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Electric Indigo",
+        "hex": "#4F46E5",
+        "tailwind": "bg-indigo-600",
+        "usage": "Primary CTAs, active states, brand moments."
+      },
+      "secondary": {
+        "name": "Soft Coral",
+        "hex": "#F472B6",
+        "tailwind": "bg-pink-400",
+        "usage": "Accents, 'New Photo' badges, heart icons."
+      },
+      "background": {
+        "light": "#FFFFFF",
+        "dark": "#050505",
+        "glass": "rgba(255, 255, 255, 0.7)"
+      },
+      "surface": {
+        "light": "#F8FAFC",
+        "dark": "#0F172A"
+      },
+      "text": {
+        "light": {
+          "primary": "#0F172A",
+          "secondary": "#64748B"
+        },
+        "dark": {
+          "primary": "#F8FAFC",
+          "secondary": "#94A3B8"
+        }
+      }
+    },
+    "rules": [
+      "NO TEAL for CTAs.",
+      "NO generic full-screen gradients. Use subtle noise textures.",
+      "Dark mode must be 'Obsidian' (#050505), not pure black.",
+      "Glassmorphism: Use backdrop-blur-xl with a 1px white/10 border."
+    ]
+  },
+  "layout": {
+    "grid_system": {
+      "marketing": "Bento Grid (Mode A). Asymmetric, artistic. Use col-span-full for hero images.",
+      "dashboard": "High Density Grid (Mode B). 12-column fluid grid. Sidebar fixed.",
+      "gallery": "Masonry Layout. Variable height images. Use 'columns-2 md:columns-3 lg:columns-4 gap-4'."
+    },
+    "spacing": {
+      "scale": "Generous. Use p-8 or p-12 for section padding.",
+      "containers": "Max-width-7xl for marketing, Fluid for dashboard.",
+      "mobile": "Stack vertically. Images max-h-[80vh]."
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or slightly rounded (rounded-lg).",
+      "interaction": "Scale down slightly on click (active:scale-95). Hover: lift (hover:-translate-y-0.5).",
+      "shadow": "Soft, colored shadow on hover (shadow-indigo-500/20)."
+    },
+    "cards": {
+      "style": "Flat with 1px border (border-slate-200 dark:border-slate-800).",
+      "hover": "Hover: border-indigo-500/50 transition-colors duration-300.",
+      "glass": "For photo overlays: bg-black/40 backdrop-blur-md text-white border-white/20."
+    },
+    "inputs": {
+      "style": "Tall (h-12). Minimal border. Focus: ring-2 ring-indigo-500/20 ring-offset-0."
+    },
+    "navigation": {
+      "marketing": "Floating glass header (sticky top-4 mx-auto max-w-5xl rounded-full border border-white/20 bg-white/60 backdrop-blur-xl).",
+      "dashboard": "Vertical sidebar. Dark mode by default for contrast with photos."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "animations": {
+      "page_transition": "Opacity fade + slight y-axis slide.",
+      "gallery_entrance": "Staggered fade-in for photos (staggerChildren: 0.1).",
+      "scanning": "A scanning line animation (cyan/indigo gradient) moving up/down over the selfie camera view.",
+      "hover": "Spring-based scale (scale: 1.02) for cards."
+    },
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "images": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1560439514-4e9645039924",
+      "alt": "Conference crowd networking",
+      "usage": "Hero section background with heavy overlay or gradient fade."
+    },
+    "photographer_feature": {
+      "url": "https://images.unsplash.com/photo-1769374071311-3935864d4a9a",
+      "alt": "Photographer capturing a moment",
+      "usage": "Feature section: 'For Organizers'."
+    },
+    "attendee_selfie": {
+      "url": "https://images.unsplash.com/photo-1758275557389-a8137c03fefc",
+      "alt": "Couple taking a selfie",
+      "usage": "Feature section: 'For Attendees' / How it works."
+    },
+    "happy_user": {
+      "url": "https://images.unsplash.com/photo-1758274251643-66fed4dc51c0",
+      "alt": "Friends happy with photos",
+      "usage": "Testimonials or Success page."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Add a subtle noise texture overlay (opacity 0.03) to the entire app to reduce digital flatness.",
+    "glass_effects": "Use for sticky headers, modal overlays, and photo metadata overlays.",
+    "gradients": "Use 'Aurora' gradients (blurred blobs of color) in the background of the Landing Page, NOT on buttons."
+  },
+  "instructions_to_main_agent": {
+    "general": "You are building a high-performance photo platform. Speed and aesthetics are paramount.",
+    "frontend": "Use React + Tailwind + Framer Motion. Ensure images load lazily (blur-up effect).",
+    "backend": "FastAPI. Focus on efficient batch processing for photo uploads.",
+    "testing": "Add data-testid to all interactive elements (buttons, inputs, cards)."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Avoid 'AI Slop': Do not use generic centered layouts or default Tailwind colors.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠 etc.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Use sonner for toasts."
+  ]
+}
